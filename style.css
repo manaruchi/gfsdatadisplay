@@ -1,0 +1,242 @@
+body{
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  font-family: 'Rubik', sans-serif;
+}
+
+#header{
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-size: large;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#header2{
+  text-align: center;
+  background-color: black;
+  color: white;
+  background: gray;
+  font-size: large;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+ #header2a{
+    text-align: center;
+    background-color: black;
+    color: white;
+    background: gray;
+    font-size: large;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buttons2{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.small-button{
+    background-color: grey;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.small-button:hover{
+    background-color: black;
+}
+
+.icons{
+  width: 60px;
+}
+
+.icon-text{
+  color: white;
+}
+
+.icon-sub-text{
+  color: white;
+  font-size: small;
+  font-style: italic;
+}
+
+.windcharts{
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  object-position: 85% 85%;
+}
+
+.utc_active{
+  background: black;
+  height: 40px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 10px;
+}
+
+.utc_inactive{
+  background: gray;
+  height: 40px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 10px;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.utc_inactive:hover{
+  background: black;
+  color: white;
+
+}
+
+.cap{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#gallery{
+  display: grid;
+  row-gap:  5px;
+  column-gap: 5px;
+  width: 1210px;
+  margin: auto;
+  grid-template-columns: 1fr; /* default: 1 column */
+  padding: 1rem;
+}
+
+.picpic{
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.imgimgimg{
+  margin: -650px 0px 0px -800px;
+  width: 2500px;
+  z-index: 1;
+  position: absolute;
+}
+
+.piccap{
+  background-color: yellow;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 70px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  #gallery {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+}
+
+.time-controls {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  font-family: sans-serif;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+.current-time {
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 2.5rem;
+  text-align: center;
+
+}
+
+.hour-btn.active {
+  background-color: #f39c12; /* active color */
+  color: white;
+}
+
+.loader {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-left: 10px;
+} 
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #FF3D00;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
